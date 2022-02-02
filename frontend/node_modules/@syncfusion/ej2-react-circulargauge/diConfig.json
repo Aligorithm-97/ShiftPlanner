@@ -1,0 +1,590 @@
+{
+    "name": "CircularGauge",
+    "description": "Circular Gauge Component",
+   "keywords": {
+        "common": ["ej2", "syncfusion","ej2-circulargauge","web-components", "circular-gauge","annotation", "scale", "range", "axis", "pointer", "tooltip", "thermometer", "container", "typescript"],
+        "angular": ["angular", "ng-circulargauge", "ej2-ng-circulargauge"],
+        "react": ["react", "reactjs", "react-circulargauge", "ej2-react-circulargauge"],
+        "vue": ["vue", "vuejs", "vue-circulargauge", "ej2-vue-circulargauge"]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/syncfusion/ej2-circulargauge"
+    },
+    "eventInterfaces": [ "ILoadedEventArgs", "IAnimationCompleteEventArgs", "IAxisLabelRenderEventArgs", "IRadiusCalculateEventArgs", "IAnnotationRenderEventArgs", "ITooltipRenderEventArgs", "IPointerDragEventArgs", "IMouseEventArgs", "IResizeEventArgs"],
+    "components": [
+        {
+            "baseClass": "CircularGauge",
+            "directoryName": "circular-gauge",
+            "blazorPlaceholder": "circulargauge",
+            "isPartialClass": true,
+            "type": "simple",
+            "blazorType": "native",
+            "blazorDependency": [
+                "ej2-base",
+                "../blazor/sf-circulargauge"
+            ],
+            "twoWays": [],
+            "comment": [
+                "/**",
+                " * Circular Gauge Component",
+                " * ```html",
+                " * <ej-circulargauge></ej-circulargauge>",
+                " * ```",
+                " */"
+            ],
+            "reactComment": [
+                "/**",
+                " * Represents react Circular Gauge Component",
+                " * ```tsx",
+                " * <CircularGaugeComponent></CircularGaugeComponent>",
+                " * ```",
+                " */"
+            ],
+            "vueComment":[
+                "/**",
+                " * Represents Vuejs Circular Gauge Component",
+                " * ```vue",
+                " * <ejs-circulargauge></ejs-circulargauge>",
+                " * ```",
+                " */"
+            ],
+            "templateProperties": [
+                "tooltip.template"
+            ],
+            "dynamicModules": [
+                "GaugeTooltip",
+                "Annotations",
+                "Legend",
+				"Print",
+				"PdfExport",
+                "ImageExport",
+                "Gradient"
+            ],
+            "complexDirective":[
+                {
+                    "propertyName": "margin",
+                    "baseClass": "Margin",
+                    "isCommon": true,
+                    "blazorCommonClassName":  "CircularGaugeMarginSettings",
+                    "blazorClassName":  "CircularGaugeMargin"
+                },
+                {
+                    "propertyName": "tooltip",
+                    "baseClass": "TooltipSettings",
+                    "blazorTemplates": ["template:tooltipTemplate"],
+                    "blazorTemplateModels": {
+                        "tooltipTemplate": "ITooltipTemplateValue"
+                    },
+                    "complexDirective":[
+                        {
+                            "propertyName": "border",
+                            "baseClass": "Border",
+                            "isCommon": true,
+                            "blazorCommonClassName":  "CircularGaugeBorderSettings",
+                            "blazorClassName":  "CircularGaugeTooltipBorder"
+
+                        },
+                        {
+                            "propertyName": "textStyle",
+                            "baseClass": "Font",
+                            "isCommon": true,
+                            "blazorCommonClassName":  "CircularGaugeFontSettings",
+                            "blazorClassName": "CircularGaugeTooltipTextStyle"
+                        },
+                        {
+                            "propertyName": "rangeSettings",
+                            "baseClass": "RangeTooltip",
+                            "blazorClassName": "CircularGaugeRangeTooltipSettings",
+                            "complexDirective":[
+                                {
+                                    "propertyName": "border",
+                                    "baseClass": "Border",
+                                    "isCommon": true,
+                                    "blazorCommonClassName":  "CircularGaugeBorderSettings",
+                                    "blazorClassName":  "CircularGaugeRangeTooltipBorder"
+        
+                                },
+                                {
+                                    "propertyName": "textStyle",
+                                    "baseClass": "Font",
+                                    "isCommon": true,
+                                    "blazorCommonClassName":  "CircularGaugeFontSettings",
+                                    "blazorClassName": "CircularGaugeRangeTooltipTextStyle"
+                                }
+                            ]
+                        },
+                        {
+                            "propertyName": "annotationSettings",
+                            "baseClass": "AnnotationTooltip",
+                            "blazorClassName": "CircularGaugeAnnotationTooltipSettings",
+                            "complexDirective":[
+                                {
+                                    "propertyName": "border",
+                                    "baseClass": "Border",
+                                    "isCommon": true,
+                                    "blazorCommonClassName":  "CircularGaugeBorderSettings",
+                                    "blazorClassName":  "CircularGaugeAnnotationTooltipBorder"
+        
+                                },
+                                {
+                                    "propertyName": "textStyle",
+                                    "baseClass": "Font",
+                                    "isCommon": true,
+                                    "blazorCommonClassName":  "CircularGaugeFontSettings",
+                                    "blazorClassName": "CircularGaugeAnnotationTooltipTextStyle"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "propertyName": "border",
+                    "baseClass": "Border"
+                },
+                {
+                    "propertyName": "titleStyle",
+                    "baseClass": "Font",
+                    "isCommon": true,
+                    "blazorCommonClassName":  "CircularGaugeFontSettings",
+                    "blazorClassName": "CircularGaugeTitleStyle"
+                },
+                {
+                    "propertyName": "legendSettings",
+                    "baseClass": "LegendSettings",
+                    "complexDirective":[
+                        {
+                            "propertyName": "border",
+                            "baseClass": "Border",
+                            "isCommon": true,
+                            "blazorCommonClassName":  "CircularGaugeBorderSettings",
+                            "blazorClassName":  "CircularGaugeLegendBorder"
+                        },
+                        {
+                            "propertyName": "shapeBorder",
+                            "baseClass": "Border",
+                            "isCommon": true,
+                            "SelectorName": "e-legendsettings-shapeborder",
+                            "aspSelectorName": "e-legendsettings-shapeborder",
+                            "blazorCommonClassName":  "CircularGaugeBorderSettings",
+                            "blazorClassName":  "CircularGaugeLegendShapeBorder"
+
+                        },
+                        {
+                            "propertyName": "textStyle",
+                            "baseClass": "Font",
+                            "isCommon": true,
+                            "blazorCommonClassName":  "CircularGaugeFontSettings",
+                            "blazorClassName": "CircularGaugeLegendTextStyle"
+                        },
+                        {
+                            "propertyName": "margin",
+                            "baseClass": "Margin",
+                            "isCommon": true,
+                            "blazorCommonClassName":  "CircularGaugeMarginSettings",
+                            "blazorClassName":  "CircularGaugeLegendMargin"
+                        }
+                    ]
+                }
+            ],
+            "tagDirective": [
+                {
+                    "arrayDirectiveClassName": "axes",
+                    "directiveClassName": "axis",
+                    "aspArrayDirectiveSelector": "e-circulargauge-axes",
+                    "aspDirectiveSelector": "e-circulargauge-axis",
+                    "arrayDirectiveSelector": "ej-circulargauge>e-axes",
+                    "directiveSelector": "e-axes>e-axis",
+                    "propertyName": "axes",
+                    "directoryName": "circular-gauge",
+                    "baseClass": "Axis",
+                    "blazorArrayClassName" :"CircularGaugeAxes",
+                    "complexDirective": [
+                        {
+                            "propertyName": "labelStyle",
+                            "baseClass": "Label",
+                            "blazorClassName":  "CircularGaugeAxisLabelStyle",
+                            "complexDirective": [{
+                                "propertyName": "font",
+                                "baseClass": "Font",
+                                "SelectorName": "e-axis-labelstyle-font",
+                                "aspSelectorName": "e-axis-labelstyle-font",
+                                "isCommon": true,
+                                "blazorCommonClassName": "CircularGaugeFontSettings",
+                                "blazorClassName":  "CircularGaugeAxisLabelFont"
+                            }]
+                        },
+                        {
+                            "propertyName": "lineStyle",
+                            "baseClass": "Line",
+                            "blazorClassName":  "CircularGaugeAxisLineStyle"
+                        },
+                        {
+                            "propertyName": "majorTicks",
+                            "baseClass": "Tick",
+                            "isCommon": true,
+                            "blazorCommonClassName": "CircularGaugeTickSettings",
+                            "blazorClassName":  "CircularGaugeAxisMajorTicks"
+                        },
+                        {
+                            "propertyName": "minorTicks",
+                            "baseClass": "Tick",
+                            "isCommon": true,
+                            "blazorCommonClassName": "CircularGaugeTickSettings",
+                            "blazorClassName":  "CircularGaugeAxisMinorTicks"
+                        }
+                ],
+                    "comment": [
+                        "/**",
+                        " * Axes directive",
+                        " * ```html",
+                        " * <e-axes><e-axis></e-axis></e-axes>",
+                        " * ```",
+                        " */"
+                    ],
+                    "reactComment": [
+                        "/**",
+                        " * `Axis` directive represent a axes of the react circular gauge ",
+                        " * It must be contained in a CircularGauge component(`CircularGauge`). ",
+                        " * ```tsx",
+                        " * <CircularGaugeComponent>",
+                        " * <AxesDirective>",
+                        " * <AxisDirective></AxisDirective>",
+                        " * </AxesDirective>",
+                        " * </CircularGaugeComponent>",
+                        " * ```",
+                        " */"
+                    ],
+                    "vueComment":[
+                        "/**",
+                        " * `Axis` directive represent a axes of the Vuejs circular gauge.",
+                        " * ```vue",
+                        " * <ejs-circulargauge>",
+                        " * <e-axes><e-axis></e-axis></e-axes>",
+                        " * </ejs-circulargauge>",
+                        " * ```",
+                        " */"
+                    ],
+                    "tagDirective": [
+                        {
+                            "arrayDirectiveClassName": "annotations",
+                            "directiveClassName": "annotation",
+                            "aspArrayDirectiveSelector": "e-circulargauge-annotations",
+                            "aspDirectiveSelector": "e-circulargauge-annotation",
+                            "arrayDirectiveSelector": "ej-circulargauge>e-axes>e-axis>e-annotations",
+                            "directiveSelector": "e-annotations>e-annotation",
+                            "propertyName": "annotations",
+                            "directoryName": "circular-gauge",
+                            "baseClass": "Annotation",
+                            "blazorContainerTemplates": ["content:contentTemplate"],
+                            "complexDirective":[
+                                {
+                                    "propertyName":"textStyle",
+                                    "baseClass":"Font",
+                                    "isCommon": true,
+                                    "blazorCommonClassName":  "CircularGaugeFontSettings",
+                                    "blazorClassName":  "CircularGaugeAnnotationTextStyle"
+                                }
+                            ],
+                            "comment": [
+                                "/**",
+                                " * Annotation directive",
+                                " * ```html",
+                                " * <e-annotations><e-annotation></e-annotation></e-annotations>",
+                                " * ```",
+                                " */"
+                            ],
+                            "reactComment": [
+                                "/**",
+                                " * `Annotations` directive represent a annotations of the react circular gauge. ",
+                                " * It must be contained in a CircularGauge component(`CircularGauge`). ",
+                                " * ```tsx",
+                                " * <CircularGaugeComponent>",
+                                " * <AxesDirective>",
+                                " * <AxisDirective>",
+                                " * <AnnotationsDirective>",
+                                " * <AnnotationDirective></AnnotationDirective>",
+                                " * </AnnotationsDirective>",
+                                " * </AxisDirective>",
+                                " * </AxesDirective>",
+                                " * </CircularGaugeComponent>",
+                                " * ```",
+                                " */"
+                            ],
+                            "vueComment":[
+                                "/**",
+                                " * `Annotations` directive represent a annotations of the Vuejs circular gauge.",
+                                " * ```vue",
+                                " * <ejs-circulargauge>",
+                                " * <e-axes>",
+                                " * <e-axis>",
+                                " * <e-annotations><e-annotation></e-annotation></e-annotations>",
+                                " * </e-axis>",
+                                " * </e-axes>",
+                                " * </ejs-circulargauge>",
+                                " * ```",
+                                " */"
+                            ],
+                            "templateProperties": [
+                                "content"
+                            ]
+                        },
+                        {
+                            "arrayDirectiveClassName": "ranges",
+                            "directiveClassName": "range",
+                            "aspArrayDirectiveSelector": "e-circulargauge-ranges",
+                            "aspDirectiveSelector": "e-circulargauge-range",
+                            "arrayDirectiveSelector": "ej-circulargauge>e-axes>e-axis>e-ranges",
+                            "directiveSelector": "e-ranges>e-range",
+                            "propertyName": "ranges",
+                            "directoryName": "circular-gauge",
+                            "baseClass": "Range",
+                            "complexDirective": [
+                            {
+                                "propertyName": "linearGradient",
+                                "baseClass": "LinearGradient",
+                                "isCommon": true,
+                                "SelectorName": "e-linear-gradient",
+                                "aspSelectorName": "e-linear-gradient",
+                                "blazorCommonClassName": "CircularGaugeLinearGradient",
+                                "blazorClassName": "LinearGradient",
+                                "tagDirective": [
+                                 {
+                                    "arrayDirectiveClassName": "colorStops",
+                                    "directiveClassName": "colorStop",
+                                    "aspArrayDirectiveSelector": "e-color-stops",
+                                    "aspDirectiveSelector": "e-color-stop",
+                                    "arrayDirectiveSelector": "ej-circulargauge>e-axes>e-axis>e-ranges>e-range>e-linear-gradient>e-color-stops",
+                                    "directiveSelector": "e-color-stops>e-color-stop",
+                                    "propertyName": "colorStop",
+                                    "directoryName": "circular-gauge",
+                                    "baseClass": "ColorStop",
+                                    "blazorClassName": "ColorStop"
+                                  }]
+                            },
+                            {
+                                "propertyName": "radialGradient",
+                                "baseClass": "RadialGradient",
+                                "isCommon": true,
+                                "SelectorName": "e-radial-gradient",
+                                "aspSelectorName": "e-radial-gradient",
+                                "blazorCommonClassName": "CircularGaugeRadialGradient",
+                                "blazorClassName": "RadialGradient",
+                                "complexDirective":[{
+                                    "propertyName": "outerPosition",
+                                    "baseClass": "GradientPosition",
+                                    "isCommon": true,
+                                    "blazorCommonClassName": "GradientPosition",
+                                    "blazorClassName": "OuterPosition"
+                                },
+                                {
+                                    "propertyName": "innerPosition",
+                                    "baseClass": "GradientPosition",
+                                    "isCommon": true,
+                                    "blazorCommonClassName": "GradientPosition",
+                                    "blazorClassName": "InnerPosition"
+                                }],
+                               "tagDirective": [
+                                {
+                                    "arrayDirectiveClassName": "colorStops",
+                                    "directiveClassName": "colorStop",
+                                    "aspArrayDirectiveSelector": "e-color-stops",
+                                    "aspDirectiveSelector": "e-color-stop",
+                                    "arrayDirectiveSelector": "ej-circulargauge>e-axes>e-axis>e-ranges>e-range>e-radialgradient>e-color-stops",
+                                    "directiveSelector": "e-color-stops>e-color-stop",
+                                    "propertyName": "colorStop",
+                                    "directoryName": "circular-gauge",
+                                    "baseClass": "ColorStop",
+                                    "blazorClassName": "ColorStop"
+                                }]
+                            }],
+                            "comment": [
+                                "/**",
+                                " * Ranges directive",
+                                " * ```html",
+                                " * <e-ranges><e-range></e-range></e-ranges>",
+                                " * ```",
+                                " */"
+                            ],
+                            "reactComment": [
+                                "/**",
+                                " * `Ranges` directive represent a ranges of the react circular gauge. ",
+                                " * It must be contained in a CircularGauge component(`CircularGauge`). ",
+                                " * ```tsx",
+                                " * <CircularGaugeComponent>",
+                                " * <AxesDirective>",
+                                " * <AxisDirective>",
+                                " * <RangesDirective>",
+                                " * <RangeDirective></RangeDirective>",
+                                " * </RangesDirective>",
+                                " * </AxisDirective>",
+                                " * </AxesDirective>",
+                                " * </CircularGaugeComponent>",
+                                " * ```",
+                                " */"
+                            ],
+                            "vueComment":[
+                                "/**",
+                                " * `Ranges` directive represent a ranges of the Vuejs circular gauge.",
+                                " * ```vue",
+                                " * <ejs-circulargauge>",
+                                " * <e-axes>",
+                                " * <e-axis>",
+                                " * <e-ranges><e-range></e-range></e-ranges>",
+                                " * </e-axis>",
+                                " * </e-axes>",
+                                " * </ejs-circulargauge>",
+                                " * ```",
+                                " */"
+                            ]
+                        },
+                        {
+                            "arrayDirectiveClassName": "pointers",
+                            "directiveClassName": "pointer",
+                            "aspArrayDirectiveSelector": "e-circulargauge-pointers",
+                            "aspDirectiveSelector": "e-circulargauge-pointer",
+                            "arrayDirectiveSelector": "ej-circulargauge>e-axes>e-axis>e-pointers",
+                            "directiveSelector": "e-pointers>e-pointer",
+                            "propertyName": "pointers",
+                            "directoryName": "circular-gauge",
+                            "baseClass": "Pointer",
+                            "complexDirective":[
+                                {
+                                    "propertyName":"animation",
+                                    "baseClass":"Animation",
+                                    "blazorClassName": "CircularGaugePointerAnimation"
+                                },
+                                {
+                                    "propertyName":"border",
+                                    "baseClass":"Border",
+                                    "isCommon": true,
+                                    "blazorCommonClassName":  "CircularGaugeBorderSettings",
+                                    "blazorClassName": "CircularGaugePointerBorder"
+                                },
+							    {
+                                    "propertyName": "linearGradient",
+                                    "baseClass": "LinearGradient",
+                                    "isCommon": true,
+                                    "SelectorName": "e-linear-gradient",
+                                    "aspSelectorName": "e-linear-gradient",
+                                    "blazorCommonClassName": "CircularGaugeLinearGradient",
+                                    "blazorClassName": "LinearGradient"
+                                },
+                                {
+                                    "propertyName": "radialGradient",
+                                    "baseClass": "RadialGradient",
+                                    "isCommon": true,
+                                    "SelectorName": "e-radial-gradient",
+                                    "aspSelectorName": "e-radial-gradient",
+                                    "blazorCommonClassName": "CircularGaugeRadialGradient",
+                                    "blazorClassName": "RadialGradient"
+                                },
+                                {
+                                    "propertyName":"cap",
+                                    "baseClass":"Cap",
+                                    "complexDirective":[{
+                                        "propertyName":"border",
+                                        "baseClass":"Border",
+                                        "SelectorName": "e-pointers-cap-border",
+                                        "aspSelectorName": "e-pointers-cap-border",
+                                        "isCommon": true,
+                                        "blazorCommonClassName":  "CircularGaugeBorderSettings",
+                                        "blazorClassName":  "CircularGaugeCapBorder"
+                                },
+                                {
+                                    "propertyName": "linearGradient",
+                                    "baseClass": "LinearGradient",
+                                    "isCommon": true,
+                                    "SelectorName": "e-linear-gradient",
+                                    "aspSelectorName": "e-linear-gradient",
+                                    "blazorCommonClassName": "CircularGaugeLinearGradient",
+                                    "blazorClassName": "LinearGradient"
+                                },
+                                {
+                                    "propertyName": "radialGradient",
+                                    "baseClass": "RadialGradient",
+                                    "isCommon": true,
+                                    "SelectorName": "e-radial-gradient",
+                                    "aspSelectorName": "e-radial-gradient",
+                                    "blazorCommonClassName": "CircularGaugeRadialGradient",
+                                    "blazorClassName": "RadialGradient"
+                            	}]
+                                },
+                                {
+                                    "propertyName":"needleTail",
+                                    "baseClass":"NeedleTail",
+                                    "complexDirective":[{
+                                        "propertyName":"border",
+                                        "baseClass":"Border",
+                                        "blazorClassName": "CircularGaugeNeedleTailBorder",
+                                        "SelectorName": "e-pointers-needletail-border",
+                                        "aspSelectorName": "e-pointers-needletail-border",
+                                        "isCommon": true,
+                                        "blazorCommonClassName": "CircularGaugeBorderSettings"
+                                },
+                                {
+                                    "propertyName": "linearGradient",
+                                    "baseClass": "LinearGradient",
+                                    "isCommon": true,
+                                    "SelectorName": "e-linear-gradient",
+                                    "aspSelectorName": "e-linear-gradient",
+                                    "blazorCommonClassName": "CircularGaugeLinearGradient",
+                                    "blazorClassName": "LinearGradient"
+                                },
+                                {
+                                    "propertyName": "radialGradient",
+                                    "baseClass": "RadialGradient",
+                                    "isCommon": true,
+                                    "SelectorName": "e-radial-gradient",
+                                    "aspSelectorName": "e-radial-gradient",
+                                    "blazorCommonClassName": "CircularGaugeRadialGradient",
+                                    "blazorClassName": "RadialGradient"
+                            	}]
+                                }
+                            ],
+                            "comment": [
+                                "/**",
+                                " * Pointers directive",
+                                " * ```html",
+                                " * <e-pointers><e-pointer></e-pointer></e-pointers>",
+                                " * ```",
+                                " */"
+                            ],
+                            "reactComment": [
+                                "/**",
+                                " * `Pointers` directive represent a pointers of the react circular gauge.",
+                                " * It must be contained in a CircularGauge component(`CircularGauge`). ",
+                                " * ```tsx",
+                                " * <CircularGaugeComponent>",
+                                " * <AxesDirective>",
+                                " * <AxisDirective>",
+                                " * <PointersDirective>",
+                                " * <PointerDirective></PointerDirective>",
+                                " * </PointersDirective>",
+                                " * </AxisDirective>",
+                                " * </AxesDirective>",
+                                " * </CircularGaugeComponent>",
+                                " * ```",
+                                " */"
+                            ],
+                            "vueComment":[
+                                "/**",
+                                " * `Pointers` directive represent a pointers of the Vuejs circular gauge.",
+                                " * ```vue",
+                                " * <ejs-circulargauge>",
+                                " * <e-axes>",
+                                " * <e-axis>",
+                                " * <e-pointers><e-pointer></e-pointer></e-pointers>",
+                                " * </e-axis>",
+                                " * </e-axes>",
+                                " * </ejs-circulargauge>",
+                                " * ```",
+                                " */"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,153 @@
+{
+    "name": "Notifications",
+    "description": "Notification Components",     
+    "keywords": {
+        "common": [
+            "ej2",
+            "syncfusion",
+            "web-components",
+            "javascript",
+            "typescript",
+            "ej2-notification-components",
+            "ej2-badge",
+            "badges",
+            "ej2-toast",
+            "toast",
+            "toaster",
+            "notification",
+            "notification badge",
+            "circle badge",
+            "badge css",
+            "toast css",
+            "alart"
+        ],
+        "angular": ["angular", "ng", "ng-template", "ej2-ng-notifications", "ng-notifications", "ng-toast", "angular-toaster", "angular-template", "ej2-angular-notifications", "angular-notifications", "angular-toast", "angular-toaster"],
+        "react": ["react", "ej2-react-notifications", "react-notifications", "react-toast", "react-toaster"],
+        "vue": ["vue", "ej2-vue-notifications", "vue-notifications", "vue-toast", "vue-toaster"]
+    },
+	"eventInterfaces": ["ToastClickEventArgs", "ToastBeforeOpenArgs", "ToastOpenArgs", "ToastCloseArgs"],
+    "components": [ 
+        {
+            "baseClass": "Toast",
+            "directoryName": "toast",
+            "type": "container",
+            "preferredTag":"div",
+            "defaultTag": "<div id='ej2Toast'></div>",
+            "twoWays": [],
+            "comment": [
+            "/**",
+            " * Represents the Angular Toast Component",
+            " * ```html",
+            " * <ejs-toast></ejs-toast>",
+            " * ```",
+            " */"
+        ],
+        "reactComment": [
+            "/**",
+            " * Represents the React Toast Component",
+            " * ```html",
+            " * <Toast></Toast>",
+            " * ```",
+            " */"
+        ],
+        "vueComment": [
+            "/**",
+            " * Represents the Vue Toast Component",
+            " * ```html",
+            " * <ejs-toast></ejs-toast>",
+            " * ```",
+            " */"
+        ],
+        "complexDirective": [
+            {
+                "propertyName" : "position",
+                "baseClass" : "ToastPosition",
+                "aspSelectorName": "e-toast-position",
+                "isPartialClass":true
+            },
+            {
+                "propertyName" : "animation",
+                "baseClass": "ToastAnimationSettings",
+                "aspSelectorName": "e-toast-animationsettings",
+                "isDeprecated":true,
+                "isPartialClass":true,
+                "complexDirective": [{
+                        "propertyName": "show",
+                        "baseClass": "ToastAnimations",
+                        "isCommon": true,
+                        "blazorCommonClassName": "ToastAnimationsShow",
+                        "blazorClassName": "ToastAnimationSettingsShow",
+                        "aspSelectorName": "e-toast-animationsettingsshow"
+                    },
+                    {
+                        "propertyName": "hide",
+                        "baseClass": "ToastAnimations",
+                        "isCommon": true,
+                        "blazorCommonClassName": "ToastAnimationsHide",
+                        "blazorClassName": "ToastAnimationSettingsHide",
+                        "aspSelectorName": "e-toast-animationsettingshide"
+                    }
+                ]
+            }
+        ],
+        "templateProperties": [
+            "title",
+            "content",
+            "template"
+        ],
+        "blazorType": "native",
+        "tagDirective": [
+            {
+                "arrayDirectiveClassName": "ButtonModelProps",
+                "directiveClassName": "ButtonModelProp",
+                "propertyName": "buttons",
+                "directoryName": "toast",
+                "isDeprecated":true,
+                "baseClass": "ButtonModelProps",
+                "comment": [
+                    "/**",
+                    " * 'e-button' directive represent a button of angular toast ",
+                    " * It must be contained in a Toast component(`ejs-toast`). ",
+                    " * ```html",
+                    " * <ejs-toast id='toast' showCloseIcon=true> ",
+                    " *   <e-buttons>",
+                    " *    <e-button content='Ok' isPrimary=true></e-button>",
+                    " *    <e-button content='Cancel'></e-button>",
+                    " *   </e-buttons>",
+                    " * </ejs-toast>",
+                    " * ```",
+                    " */"
+                ],
+                "reactComment": [
+                    "/**",
+                    " * `ButtonDirective` represent a button of the react Toast. ",
+                    " * It must be contained in a Toast component(`ToastrComponent`). ",
+                    " * ```tsx",
+                    " * <ToastComponent> ",
+                    " * <ButtonsDirective>",
+                    " * <ButtonDirective content='Ok' isPrimary=true></ButtonDirective>",
+                    " * <ButtonDirective content='Cancel'></ButtonDirective>",
+                    " * <ButtonsDirective>",
+                    " * </ToastComponent>",
+                    " * ```",
+                    " */"
+                ],
+                "vueComment": [
+                    "/**",
+                    " * 'e-button' directive represent a button of Vue toast ",
+                    " * It must be contained in a Toast component(`ejs-toast`). ",
+                    " * ```html",
+                    " * <ejs-toast id='toast' :showCloseIcon=true> ",
+                    " *   <e-buttons>",
+                    " *    <e-button :content='Ok' :isPrimary=true></e-button>",
+                    " *    <e-button :content='Cancel'></e-button>",
+                    " *   </e-buttons>",
+                    " * </ejs-toast>",
+                    " * ```",
+                    " */"
+                ]
+            }
+        ]
+    }
+    ]
+}

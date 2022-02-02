@@ -1,0 +1,300 @@
+{
+    "name": "TreeMap",
+    "description": "TreeMap Component",
+   "keywords": {
+        "common": ["ej2", "syncfusion","ej2-treemap","web-components", "treemap", "layout", "leaf-node", "levels", "legend", "color-mapping", "labels", "tooltip", "drilldown", "legend", "label-template", "typescript"],
+        "angular": ["angular", "ng-treemap", "ej2-ng-treemap"],
+        "react": ["react", "reactjs", "react-treemap", "ej2-react-treemap"],
+        "vue": ["vue", "vuejs", "vue-treemap", "ej2-vue-treemap"]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/syncfusion/ej2-treemap"
+    },
+    "eventInterfaces": ["ILoadEventArgs", "IPrintEventArgs", "ILoadedEventArgs", "IItemRenderingEventArgs", "IDrillStartEventArgs", "IDrillEndEventArgs", "IItemSelectedEventArgs", "IItemHighlightEventArgs", "ITreeMapTooltipRenderEventArgs", "IItemClickEventArgs", "IItemMoveEventArgs", "IDoubleClickEventArgs", "IMouseMoveEventArgs", "IResizeEventArgs", "ILegendItemRenderingEventArgs", "ILegendRenderingEventArgs" ],
+    "components": [{
+        "baseClass": "TreeMap",
+        "directoryName": "treemap",
+        "blazorPlaceholder": "treemap",
+        "isPartialClass": true,
+        "type": "simple",
+        "blazorType": "native",
+        "blazorDependency": [
+            "ej2-base",
+            "../blazor/sf-treemap"
+        ],
+        "defaultTag": "<treemap id='treemap'></treemap>",
+        "twoWays": [],
+        "isGenericClass": true,
+        "comment": [
+            "/**",
+            " * TreeMap Component",
+            " * ```html",
+            " * <ej-treemap></ej-treemap>",
+            " * ```",
+            " */"
+        ],
+        "reactComment": [
+            "/**",
+            " * Represents react TreeMap Component",
+            " * ```tsx",
+            " * <TreeMapComponent></TreeMapComponent>",
+            " * ```",
+            " */"
+        ],
+        "vueComment": [
+            "/**",
+            " * Represents Vuejs TreeMap Component",
+            " * ```vue",
+            " * <ejs-treemap></ejs-treemap>",
+            " * ```",
+            " */"
+        ],
+        "templateProperties": [
+            "tooltipSettings.template",
+            "leafItemSettings.labelTemplate"
+        ],
+        "dynamicModules": [
+            "TreeMapTooltip",
+            "TreeMapLegend",
+            "TreeMapHighlight",
+            "TreeMapSelection",
+			"Print",
+			"PdfExport",
+			"ImageExport"
+        ],
+        "complexDirective": [
+            {
+                "propertyName": "titleSettings",
+                "baseClass": "TitleSettings",
+                "complexDirective": [{
+                        "propertyName": "subtitleSettings",
+                        "baseClass": "SubTitleSettings",
+                        "blazorClassName": "TreeMapSubtitleSettings",
+                        "complexDirective": [{
+                            "propertyName": "textStyle",
+                            "baseClass": "Font",
+                            "SelectorName": "e-treemap-textstyle",
+                            "aspSelectorName": "e-treemap-textstyle",
+                            "isCommon": true,
+                            "blazorCommonClassName": "TreeMapFontSettings",
+                            "blazorClassName": "TreeMapSubtitleTextStyle"
+                        }]
+                    },
+                    {
+                        "propertyName": "textStyle",
+                        "baseClass": "Font",
+                        "isCommon": true,
+                        "blazorCommonClassName": "TreeMapFontSettings",
+                        "blazorClassName": "TreeMapTitleTextStyle"
+                    }
+                ]
+            },
+            {
+                "propertyName": "highlightSettings",
+                "baseClass": "HighlightSettings",
+                "complexDirective": [{
+                    "propertyName": "border",
+                    "baseClass": "Border",
+                    "isCommon": true,
+                    "blazorCommonClassName": "TreeMapBorderSettings",
+                    "blazorClassName": "TreeMapHighlightBorder"
+                }]
+            },
+            {
+                "propertyName": "selectionSettings",
+                "baseClass": "SelectionSettings",
+                "complexDirective": [{
+                    "propertyName": "border",
+                    "baseClass": "Border",
+                    "isCommon": true,
+                    "blazorCommonClassName": "TreeMapBorderSettings",
+                    "blazorClassName": "TreeMapSelectionBorder"
+                }]
+            },
+            {
+                "propertyName": "tooltipSettings",
+                "baseClass": "TooltipSettings",
+                "blazorTemplates": ["template:tooltipTemplate"],
+                "blazorTemplateModels": {
+                    "tooltipTemplate": "ITooltipTemplateValue"
+                },
+                "complexDirective": [{
+                        "propertyName": "border",
+                        "baseClass": "Border",
+                        "isCommon": true,       
+                        "blazorCommonClassName": "TreeMapBorderSettings",
+                        "blazorClassName": "TreeMapTooltipBorder"
+                    },
+                    {
+                        "propertyName": "textStyle",
+                        "baseClass": "Font",
+                        "isCommon": true,
+                        "blazorCommonClassName": "TreeMapFontSettings",
+                        "blazorClassName": "TreeMapTooltipTextStyle"
+                    }
+                ]
+            },
+            {
+                "propertyName": "initialDrillDown",
+                "baseClass": "InitialDrillSettings"
+            },
+            {
+                "propertyName": "legendSettings",
+                "baseClass": "LegendSettings",
+                "complexDirective": [{
+                        "propertyName": "textStyle",
+                        "baseClass": "Font",
+                        "isCommon": true,
+                        "blazorCommonClassName": "TreeMapFontSettings",
+                        "blazorClassName": "TreeMapLegendTextStyle"
+                    },
+                    {
+                        "propertyName": "border",
+                        "baseClass": "Border",
+                        "isCommon": true,       
+                        "blazorCommonClassName": "TreeMapBorderSettings",
+                        "blazorClassName": "TreeMapLegendBorder"
+                    },
+                    {
+                        "propertyName": "shapeBorder",
+                        "baseClass": "Border",
+                        "isCommon": true,       
+                        "blazorCommonClassName": "TreeMapBorderSettings",
+                        "blazorClassName": "TreeMapLegendShapeBorder"
+                    },
+                    {
+                        "propertyName": "title",
+                        "baseClass": "CommonTitleSettings",
+                        "isCommon": true,
+                        "blazorCommonClassName": "LegendCommonTitle",
+                        "blazorClassName": "TreeMapLegendTitle"
+                    },
+                    {
+                        "propertyName": "titleStyle",
+                        "baseClass": "Font",
+                        "isCommon": true,
+                        "blazorCommonClassName": "TreeMapFontSettings",
+                        "blazorClassName": "TreeMapLegendTitleStyle"
+                    }
+                ]
+            },
+            {
+                "propertyName": "leafItemSettings",
+                "baseClass": "LeafItemSettings",
+                "blazorTemplates": ["labelTemplate"],
+                "complexDirective": [{
+                    "propertyName": "border",
+                    "baseClass": "Border",
+                    "isCommon": true,
+                    "blazorCommonClassName": "TreeMapBorderSettings",
+                    "blazorClassName": "TreeMapLeafBorder"
+                }, {
+                    "propertyName": "labelStyle",
+                    "baseClass": "Font",
+                    "isCommon": true,
+                    "blazorCommonClassName": "TreeMapFontSettings",
+                    "blazorClassName": "TreeMapLeafLabelStyle"
+                }],
+                "tagDirective": [
+                    {
+                        "arrayDirectiveClassName": "ColorMappings",
+                        "directiveClassName": "ColorMapping",
+                        "arrayDirectiveSelector": "e-leafItemSettings>e-colorMappings",
+                        "directiveSelector": "e-leafItemSettings>e-colorMappings>e-colorMapping",
+                        "directoryName": "treemap",
+                        "propertyName": "colorMapping",
+                        "baseClass": "ColorMapping",
+                        "blazorClassName": "TreeMapLeafColorMapping",
+                        "blazorArrayClassName": "TreeMapLeafColorMappings"
+                    }
+                ]
+            },
+            {
+                "propertyName": "border",
+                "baseClass": "Border"                
+            },
+            {
+                "propertyName": "margin",
+                "baseClass": "Margin"
+            }
+        ],
+        "tagDirective": [{
+            "arrayDirectiveClassName": "Levels",
+            "directiveClassName": "Level",
+            "arrayDirectiveSelector": "ej-treemap>e-levels",
+            "directiveSelector": "e-levels>e-level",
+            "propertyName": "levels",
+            "directoryName": "treemap",
+            "baseClass": "LevelSettings",
+            "blazorArrayClassName": "TreeMapLevels",
+            "blazorTemplates": ["headerTemplate"],
+            "complexDirective": [{
+                    "propertyName": "border",
+                    "baseClass": "Border",
+                    "isCommon": true,
+                    "blazorCommonClassName": "TreeMapBorderSettings",
+                    "blazorClassName": "TreeMapLevelBorder"
+                },
+                {
+                    "propertyName": "headerStyle",
+                    "baseClass": "Font",
+                    "isCommon": true,
+                    "blazorCommonClassName": "TreeMapFontSettings",
+                    "blazorClassName": "TreeMapHeaderStyle"
+                }
+            ],
+            "tagDirective": [
+                {
+                    "arrayDirectiveClassName": "ColorMappings",
+                    "directiveClassName": "ColorMapping",
+                    "arrayDirectiveSelector": "e-levels>e-colorMappings",
+                    "directiveSelector": "e-levels>e-colorMappings>e-colorMapping",
+                    "directoryName": "treemap",
+                    "propertyName": "colorMapping",
+                    "baseClass": "ColorMapping",
+                    "blazorClassName": "TreeMapLevelColorMapping",
+                    "blazorArrayClassName": "TreeMapLevelColorMappings"
+                }
+            ],
+            "comment": [
+                "/**",
+                " * Level Directive",
+                " * ```html",
+                " * <e-levels>",
+                " * <e-level></e-level>",
+                " * </e-levels>",
+                " * ```",
+                " */"
+            ],
+            "reactComment": [
+                "/**",
+                " * `LevelsDirective` directive represent a levels of the react treemap. ",
+                " * It must be contained in a TreeMap component(`TreeMapComponent`). ",
+                " * ```tsx",
+                " * <TreeMapComponent>",
+                " * <LevelsDirective>",
+                " * <LevelDirective></LevelDirective>",
+                " * </LevelsDirective>",
+                " * </TreeMapComponent>",
+                " * ```",
+                " */"
+            ],
+            "vueComment": [
+                "/**",
+                " * `LevelsDirective` directive represent a levels of the react treemap.",
+                " * ```vue",
+                " * <ejs-treemap>",
+                " * <e-levels>",
+                " * <e-level></e-level>",
+                " * </e-levels>",
+                " * </ejs-treemap>",
+                " * ```",
+                " */"
+            ],
+            "templateProperties": [
+                "headerTemplate"
+            ]
+        }]
+    }]
+}

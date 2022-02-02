@@ -1,0 +1,109 @@
+{
+    "name": "InPlace-Editor",
+    "description": "InPlaceEditor Component",
+    "keywords": {
+        "common": ["ej2", "Syncfusion", "web-components", "inplace-editor", "editor"],
+        "angular": ["angular", "ng", "angular-inplace-editor", "angular-inplace-editor-component", "ej2-angular-inplace-editor"],
+        "react": ["react", "react-inplace-editor", "react-inplace-editor-component", "ej2-react-inplace-editor"],
+        "vue": ["vue", "vue-inplace-editor", "vue-inplace-editor-component", "ej2-vue-inplace-editor"]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/syncfusion/ej2-inplace-editor"
+    },
+	"eventInterfaces": ["ActionBeginEventArgs", "ActionEventArgs", "ValidateEventArgs"],
+    "components": [{
+        "baseClass": "InPlaceEditor",
+		"isPartialClass": true,
+        "directoryName": "inplace-editor",
+        "type": "form",
+        "defaultTag": "<div id='ej2InPlaceEditor'></div>",
+        "twoWays": [
+            "value"
+        ],
+        "blazorPlaceholder": "inplaceeditor",
+        "isGenericClass": true,
+        "dynamicModules": [
+            "AutoComplete",
+            "ColorPicker",
+            "ComboBox",
+            "DateRangePicker",
+            "MultiSelect",
+            "Rte",
+            "Slider",
+            "TimePicker"
+        ],
+        "diModuleFiles": [{
+                "fileName": "auto-complete"
+            },
+            {
+                "fileName": "color-picker"
+            },
+            {
+                "fileName": "combo-box"
+            },
+            {
+                "fileName": "date-range-picker"
+            },
+            {
+                "fileName": "multi-select"
+            },
+            {
+                "fileName": "rte"
+            },
+            {
+                "fileName": "slider"
+            },
+            {
+                "fileName": "time-picker"
+            }
+        ],
+        "blazorTwoWays": [
+            "value"
+        ],
+        "comment": [
+            "/**",
+            " * `ejs-inplaceeditor` represents the Angular InPlaceEditor Component.",
+            " * ```html",
+            " * <ejs-inplaceeditor></ejs-inplaceeditor>",
+            " * ```",
+            " */"
+        ],
+        "reactComment": [
+            "/**",
+            " * `InPlaceEditor` represents the react InPlaceEditor.",
+            " * ```tsx",
+            " * <InPlaceEditor />",
+            " * ```",
+            " */"
+        ],
+        "vueComment": [
+            "/**",
+            " * `ejs-inplace-editor` represents the VueJS InPlaceEditor Component.",
+            " * ```vue",
+            " * <ejs-inplaceeditor></ejs-inplaceeditor>",
+            " * ```",
+            " */"
+        ],
+        "templateProperties": [
+            "template"
+        ],
+        "blazorContainerTemplates":["template"],
+        "complexDirective": [{
+            "propertyName": "popupSettings",
+            "baseClass": "PopupSettings",
+            "SelectorName": "e-inplaceeditor-popupSettings"
+        }],
+		"nativeEvents": [
+			"onmousedown",
+			"onmouseup",
+			"onmouseover",
+			"onmousemove",
+			"onmouseout",
+			"onkeydown",
+			"onkeypress",
+			"onkeyup"
+        ],
+        "blazorType": "native"
+    }]
+}

@@ -1,0 +1,147 @@
+{
+    "name": "ProgressBar",
+    "description": "ProgressBar Components",
+    "keywords": {
+        "common": [
+            "ej2-progressbar",
+            "progressbar",
+            "syncfusion",
+            "web-components",
+            "Javascript",
+            "Typescript",
+            "data",
+            "progress bar",
+            "Progress Bar",
+            "ProgressBar"
+        ],
+        "angular": [
+            "angular",
+            "ng-progressbar",
+            "angular-progressbar",
+            "ej2-ng-progressbar",
+            "ej2-angular-progressbar"
+        ],
+        "react": [
+            "react",
+            "reactjs",
+            "react-progressbar",
+            "ej2-react-progressbar"
+        ],
+        "vue": [
+            "vue",
+            "vuejs",
+            "vue-progressbar",
+            "ej2-vue-progressbar"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/syncfusion/ej2-progressbar"
+    },
+    "eventInterfaces": [
+        "ILoadedEventArgs",
+        "IAnnotationRenderEventArgs"
+    ],
+    "components": [
+        {
+            "baseClass": "ProgressBar",
+            "directoryName": "progressbar",
+            "defaultTag": "<progressbar id='sample'></progressbar>",
+            "type": "simple",
+			"blazorType": "native",
+			"blazorDependency": [
+				"ej2-base",
+				"../blazor/sf-progressbar"
+			],
+            "twoWays": [],
+            "comment": [
+                "/**",
+                " * ProgressBar Component",
+                " * ```html",
+                " * <ejsprogressbar></ejsprogressbar>",
+                " * ```",
+                " */"
+            ],
+            "reactComment": [
+                "/**",
+                " * Represents react ProgressBar Component",
+                " * ```tsx",
+                " * <ProgressBarComponent></ProgressBarComponent>",
+                " * ```",
+                " */"
+            ],
+            "vueComment": [
+                "/**",
+                " * Represents Vuejs ProgressBar Component",
+                " * ```vue",
+                " * <ejs-progressbar></ejs-progressbar>",
+                " * ```",
+                " */"
+            ],
+            "dynamicModules": [
+                "ProgressAnnotation"
+            ],
+            "diModuleFiles": [
+                {
+                    "filename": "progress-annotation"
+                }
+            ],
+            "complexDirective": [
+                {
+                    "propertyName": "margin",
+                    "baseClass": "Margin"
+                },
+                {
+                    "propertyName": "animation",
+                    "baseClass": "Animation"
+                },
+                {
+                    "propertyName": "labelStyle",
+                    "baseClass": "Font"
+                }
+            ],
+            "tagDirective": [
+                {
+                    "arrayDirectiveClassName": "ProgressBarAnnotations",
+                    "directiveClassName": "ProgressBarAnnotation",
+                    "arrayDirectiveSelector": "ej-progressbar>e-progressbar-annotations",
+                    "directiveSelector": "e-progressbar-annotations>e-progressbar-annotation",
+                    "propertyName": "annotations",
+                    "directoryName": "progressbar",
+                    "baseClass": "ProgressAnnotationSettings",
+                    "aspArrayClassName": "ProgressBarAnnotationSettings",
+                    "blazorArrayClassName": "ProgressBarAnnotations",
+                    "blazorClassName": "ProgressBarAnnotation",
+                    "blazorContainerTemplates": [
+                        "content:contentTemplate"
+                    ],
+                    "comment": [
+                        "/**",
+                        " * ProgressBarAnnotations Directive",
+                        " * ```html",
+                        " * <e-progressbar-annotations>",
+                        " * <e-progressbar-annotation></e-progressbar-annotation>",
+                        " * </e-progressbar-annotations>",
+                        " * ```",
+                        " */"
+                    ],
+                    "reactComment": [
+                        "/**",
+                        " * `ProgressBarAnnotationsDirective` directive represent a annotation of the react progressbar.",
+                        " * ```tsx",
+                        " * <progressbarComponent>",
+                        " * <ProgressBarAnnotationsDirective>",
+                        " * <ProgressBarAnnotationDirective></ProgressBarAnnotationDirective>",
+                        " * </ProgressBarAnnotationsDirective>",
+                        " * </progressbarComponent>",
+                        " * ```",
+                        " */"
+                    ],
+                    "templateProperties": [
+                        "content"
+                    ]
+                }
+            ]
+        }
+    ]
+}

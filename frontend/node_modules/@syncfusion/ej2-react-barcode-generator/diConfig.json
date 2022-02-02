@@ -1,0 +1,220 @@
+{
+    "name": "Barcode-Generator",
+    "description": "Barcode Components",
+    "keywords": {
+        "common": [
+            "ej2",
+            "Syncfusion",
+            "web-components",
+            "barcode"
+        ],
+        "angular": [
+            "angular",
+            "ng",
+            "ng-barcodes",
+            "ej2-ng-barcodes"
+        ],
+        "react": [
+            "react",
+            "react-barcodes",
+            "ej2-react-barcodes"
+        ],
+        "vue": [
+            "vue",
+            "vue-barcodes",
+            "ej2-vue-barcodes"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/syncfusion/ej2-barcode-generator"
+    },
+    "components": [
+        {
+            "baseClass": "BarcodeGenerator",
+            "directoryName": "barcode-generator",
+            "type": "simple",
+            "defaultTag": "<barcode-generator id='sample'></barcode-generator>",
+            "blazorPlaceholder": "barcode",
+            "twoWays": [],
+            "dynamicModules": [],
+            "comment": [
+                "/**",
+                " * Barcode Component",
+                " * ```html",
+                " * <ej-barcode-generator></ej-barcode-generator>",
+                " * ```",
+                " */"
+            ],
+            "reactComment": [
+                "/**",
+                " * Represents react Barcode Component",
+                " * ```tsx",
+                " * <BarcodeGeneratorComponent></BarcodeGeneratorComponent>",
+                " * ```",
+                " */"
+            ],
+            "vueComment": [
+                "/**",
+                " * Represents vue Barcode Component",
+                " * ```html",
+                " * <ejs-barcode-generator></ejs-barcode-generator>",
+                " * ```",
+                " */"
+            ],
+            "complexDirective": [
+                {
+                    "propertyName": "margin",
+                    "baseClass": "Margin",
+                    "isCommon": true,
+                    "blazorClassName": "BarcodeMargin",
+                    "blazorCommonClassName": "BarcodesMargin"
+                },
+                {
+                    "propertyName": "displayText",
+                    "baseClass": "DisplayText",
+                    "aspClassName": "BarcodeGeneratorDisplayText",
+                    "complexDirective": [
+                        {
+                            "propertyName": "margin",
+                            "baseClass": "Margin",
+                            "isCommon": true,
+                            "blazorClassName": "BarcodeTextMargin",
+                            "blazorCommonClassName": "BarcodesMargin"
+                        }
+                    ]
+                }
+            ],
+            "blazorType": "native",
+            "blazorDependency": [
+                "ej2-base"
+            ]
+        },
+        {
+            "baseClass": "QRCodeGenerator",
+            "directoryName": "qrcode-generator",
+            "type": "simple",
+            "defaultTag": "<qrcode-generator id='sample'></qrcode-generator>",
+            "blazorPlaceholder": "qrcodegenerator",
+            "twoWays": [],
+            "dynamicModules": [],
+            "comment": [
+                "/**",
+                " * QRCode Component",
+                " * ```html",
+                " * <ej-qrcode-generator></ej-qrcode-generator>",
+                " * ```",
+                " */"
+            ],
+            "reactComment": [
+                "/**",
+                " * Represents react QRCode Component",
+                " * ```tsx",
+                " * <QRCodeGeneratorComponent></QRCodeGeneratorComponent>",
+                " * ```",
+                " */"
+            ],
+            "vueComment": [
+                "/**",
+                " * Represents vue QRCode Component",
+                " * ```html",
+                " * <ejs-qrcode-generator></ejs-qrcode-generator>",
+                " * ```",
+                " */"
+            ],
+            "complexDirective": [
+                {
+                    "propertyName": "margin",
+                    "baseClass": "Margin",
+                    "aspBuilderName": "QRCodeGeneratorMargin",
+                    "isCommon": true,
+                    "blazorClassName": "QRMargin",
+                    "aspClassName": "QRCodeGeneratorMargin",
+                    "blazorCommonClassName": "BarcodesMargin"
+                },
+                {
+                    "propertyName": "displayText",
+                    "baseClass": "DisplayText",
+                    "complexDirective": [
+                        {
+                            "propertyName": "margin",
+                            "baseClass": "Margin",
+                            "isCommon": true,
+                            "aspBuilderName": "QRCodeGeneratorMargin",
+                            "aspClassName": "QRCodeGeneratorDisplayTextMargin",
+                            "blazorClassName": "QRCodeTextMargin",
+                            "blazorCommonClassName": "BarcodesMargin"
+                        }
+                    ]
+                }
+            ],
+            "blazorType": "native",
+            "blazorDependency": [
+                "ej2-base"
+            ]
+        },
+        {
+            "baseClass": "DataMatrixGenerator",
+            "directoryName": "datamatrix-generator",
+            "type": "simple",
+            "defaultTag": "<datamatrix-generator id='sample'></datamatrix-generator>",
+            "blazorPlaceholder": "datamatrixgenerator",
+            "twoWays": [],
+            "dynamicModules": [],
+            "comment": [
+                "/**",
+                " * DataMatrix Component",
+                " * ```html",
+                " * <ej-datamatrix-generator></ej-datamatrix-generator>",
+                " * ```",
+                " */"
+            ],
+            "reactComment": [
+                "/**",
+                " * Represents react DataMatrix Component",
+                " * ```tsx",
+                " * <DataMatrixGeneratorComponent></DataMatrixGeneratorComponent>",
+                " * ```",
+                " */"
+            ],
+            "vueComment": [
+                "/**",
+                " * Represents vue DataMatrix Component",
+                " * ```html",
+                " * <ejs-datamatrix-generator></ejs-datamatrix-generator>",
+                " * ```",
+                " */"
+            ],
+            "complexDirective": [
+                {
+                    "propertyName": "margin",
+                    "baseClass": "Margin",
+                    "aspBuilderName": "DataMatrixGeneratorMargin",
+                    "aspClassName": "DataMatrixGeneratorMargin",
+                    "isCommon": true,
+                    "blazorClassName": "DataMatrixMargin",
+                    "blazorCommonClassName": "BarcodesMargin"
+                },
+                {
+                    "propertyName": "displayText",
+                    "baseClass": "DisplayText",
+                    "complexDirective": [
+                        {
+                            "propertyName": "margin",
+                            "baseClass": "Margin",
+                            "aspBuilderName": "DataMatrixGeneratorMargin",
+                            "aspClassName": "DataMatrixGeneratorDisplayTextMargin",
+                            "isCommon": true,
+                            "blazorClassName": "DataMatrixTextMargin",
+                            "blazorCommonClassName": "BarcodesMargin"
+                        }
+                    ]
+                }
+            ],
+            "blazorType": "native",
+            "blazorDependency": [
+                "ej2-base"
+            ]
+        }
+    ]
+}

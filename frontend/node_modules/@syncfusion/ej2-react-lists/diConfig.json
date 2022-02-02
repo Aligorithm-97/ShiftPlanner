@@ -1,0 +1,86 @@
+{
+    "name": "Lists",
+    "description": "List Components",
+    "components": [
+        {
+            "baseClass": "ListView",
+            "directoryName": "list-view",
+            "type": "simple",
+            "reactComment": [
+                "/**",
+                " * Represents ListView component for React",
+                " * ```",
+                " * <ListViewComponent dataSource={data}/>",
+                " * ```",
+                " */"
+            ],
+            "comment": [
+                "/**",
+                " * Represents Angular ListView Component",
+                " * ```",
+                " * <ejs-listview [dataSource]='data'></ejs-listview>",
+                " * ```",
+                " */"
+            ],
+            "vueComment": [
+                "/**",
+                " * Represents VueJS ListView Component",
+                " * ```",
+                " * <ejs-listview :dataSource='data'></ejs-listview>",
+                " * ```",
+                " */"
+            ],
+            "complexDirective": [
+                {
+                    "propertyName": "fields",
+                    "baseClass": "FieldSettings",
+                    "aspSelectorName": "e-listview-fieldsettings"
+                }
+            ],
+            "twoWays": [],
+            "dynamicModules": [
+                "Virtualization"
+            ],
+            "diModuleFiles": [
+                {
+                    "fileName": "virtualization"
+                }
+            ],
+            "templateProperties": [
+                "template",
+                "groupTemplate",
+                "headerTemplate"
+            ],
+            "blazorType": "native",
+            "blazorDependency": [
+                "ej2-base",
+                "../blazor/sf-listview"
+            ],
+            "blazorPlaceholder": "listview",
+            "isGenericClass": true
+        }
+    ],
+    "keywords": {
+        "common": [
+            "ej2", "Syncfusion", "web components", "virtualization", "group list", "check list", "listview with checkbox",
+            "listview template", "material list", "ui listview", "remote listview", "nested view", "data list",
+            "infinite list", "sort", "todo", "list widget", "list component", "mobile list", "list gestures",
+            "es6 list", "dynamic list"
+        ],
+        "angular": [
+            "angular listview", "ej2 ng lists", "list component", "ng template", "angular6"
+        ],
+        "react": [
+            "react lists", "ej2 react lists", "reactjs", "react ui component"
+        ],
+        "vue": [
+            "vue lists", "list plugin", "vuejs", "vue component", "ej2 vue lists"
+        ]
+
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/syncfusion/ej2-lists"
+    },
+    "eventInterfaces":["SelectEventArgs"]
+}
