@@ -3,7 +3,7 @@ Shift Planner is an application that aims to plan the shifts that need to be pla
 
 Shift Planner Algorithm assign employees to shifts according to their off-day preferences. First, algorithm tries to assign employees to their first preference. After that, those who cannot be assigned by first preference are tried to be assigned according to their second preference. If there are still unassigned employees.They are collected in an array which is called unassigned. Unassigned workers are then allocated to the remaining shifts randomly.
 
-Shortly Shift Planner is a web application which automatically assigns shifts to workers using its own algorithm.
+Shortly Shift Planner is a web application which automatically assigns shifts to workers using its own algorithm. 
 
 # ScreenShots
 
